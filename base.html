@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p>{{ about }}</p>
+
+    <h2>Skills</h2>
+    <ul>
+    {% for skill in skills %}
+        <li>{{ skill }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+    {% for project in projects %}
+        <li>
+            <a href="{{ project.link }}">{{ project.name }}</a> - {{ project.description }}
+        </li>
+    {% endfor %}
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+</body>
+</html>
